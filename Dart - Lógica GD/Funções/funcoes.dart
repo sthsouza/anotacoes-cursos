@@ -1,20 +1,21 @@
 import 'dart:io';
 
 //void main () {
+  /*
+  Toda função para ser executada precisa ser chamda, a chamada pode ser feita por algém ou um por algum evento automático. 
+  se minha mãe me deu a função de comprar leite, eu preciso de duas informações: O dinheiro e oproduto - o que vou levar
+  essas informações são paarametros
+  parametros - inputs - são informações para as funções, são entrada de dados
+  a ação é indiferente - a maneira que vou usar para a função é indiferente, pode ser a ou b
+  reotrno é a entregado resultado
 
-  //Toda função para ser executada precisa ser chamda, a chamada pode ser feita por algém ou um por algum evento automático. 
-  //se minha mãe me deu a função de comprar leite, eu preciso de duas informações: O dinheiro e oproduto - o que vou levar
-  //essas informações são paarametros
-  //parametros - inputs - são informações para as funções, são entrada de dados
-  //a ação é indiferente - a maneira que vou usar para a função é indiferente, pode ser a ou b
-  //reotrno é a entregado resultado
-
-  //-------------------------
-  //uma ação pode receber parametros e retornar um resultado
-  //pq são importantes??
-  //escrever um código organizado, ao inves de escrever várias vezes é só chamar a função
-  //funçao main -- função principal no dart
-  // void é o retorno, main é o nome da funçãi
+  /-------------------------
+  uma ação pode receber parametros e retornar um resultado
+  --pq são importantes??
+  ----escrever um código organizado, ao inves de escrever várias vezes é só chamar a função
+  --funçao main -- função principal no dart
+  --void é o retorno, main é o nome da função
+  */
 
 
 void main () {
@@ -46,8 +47,11 @@ void saudacao () {
   print("Seja bem-vindo growdever!!");
 }
 
-//como criar uma função??
-//abrir e fechar parenteses 
-//receber informações- parametros
-//
+/*
+como criar uma função??
+--abrir e fechar parenteses 
+--receber informações- parametros
+-- É possivel passar parammentros atráveis de numerosfixos, não só de variáveis!!
+*/
+
 
