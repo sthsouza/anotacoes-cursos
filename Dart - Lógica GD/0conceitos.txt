@@ -1,0 +1,559 @@
+
+------- DART - CONCEITOS --------------
+void main(){
+  print("welcome");
+}
+
+Váriavel: Armazenam informações, declarar variáveis é criar variáveis.
+- string: Texto
+    String nome = "Stheffany";
+- boolean: True or false
+    bool professor = false;
+- int: Números
+    int idade = 34;
+- var: Números quebrados (com ponto)
+    var altura = 1.2;
+- dynamic: Famoso tanto faz, entretanto, ao contrário das outras, posso mudar o tipo de dado a qualquer momento.
+
+//dart é uma linguagemfortemente tipada (tipagem estática)
+Se define o tipo da variável enqunato a declaramos
+
+********Como declarar variáveis? existem 2 tipos:
+- tipo do dado + nome da variável + valor da variável
+    string curso = "Curso Dart";
+
+- palavra reservar "var" + nome da variável + valor da variável
+    var idade = 29; (O valor e defindo pelo valor da variável, e não pelo tipo de dado)
+
+/////////CONCATENAÇÃO de striings ////////////////////////////////////
+
+----o que é?
+    Junta as informações de duas ou mais strings. É possivel concatenar não só apenas strings mas váriaveis de outros valores. 
+    
+----Como funciona?
+    Basta inserir o simbolo do sifrão antes da variável, EX: $nome. 
+
+  final nome = "Stheffany";
+  final idade = 14;
+  final endereco = "Rua X, cidade Y";
+
+  print ("Olá, bom dia $nome, você tem $idade anos e você mora no endereço $endereco");
+
+  ///////////OPERADORES ARITIMÉTICOS //////////////////////////
+
+  ----O que é??
+    São operadores que permitem cálculos matemáticos no Dart.
+    Soma: +
+    Subtração: -
+    Divisão: /
+    Multiplicação: *
+    Sobra da divisão: %
+
+------Como usar?
+    final soma = 1 + 2;
+    final sub = 3-1;
+
+------Operações com váriaveis   
+    Também é possivel realizar calculos aritiméticos com váriais, em que a operação é feita com o valor da váriavel.
+
+    int num1 = 6;
+    int num2 = 3;
+
+    final numns = num1 + num2;
+
+    print("O valor dacompra foi R/S $numns");
+
+/////////OPERADORES RELACIONAIS//////////////
+------O que é?
+    Operadores relacionais possibilitam uma comparação entre valores, retornaando um valor verdadeiro. Qual número é maior, qual menore assim por diante usando o boolean.
+
+------Como funciona?
+    void main(){
+
+final num1 = 10;
+final num2 = 20;
+final nuum3 = 10;
+
+
+// == -> Igual
+final eIgual = num1 ==num2;
+print("eIgual: $eIgual");
+
+// != -> Diferente
+final eDiferente = 10 != num2;
+print("eDiferente $eDiferente");
+
+// > -> Maior que
+final eMaior = 20 > num1;
+print("eMaior $eMaior");
+
+// < -> Menor que
+final eMenor = 20 > num1;
+print("eMenor $eMenor");
+
+// >= -> Maior igual
+final eMaiorIgual = 20 >= num1;
+print("eMaiorIgual $eMaiorIgual");
+
+// <= -> menor igual
+final eMenorIgual = 20 <= num1;
+print("eMenorIgual $eMenorIgual");
+
+
+}
+
+/////////OPERADORES LÓGICOS//////////////
+-------O que são?
+    Operadores lógicos servem para fazer a combinação de valores falsos ou verdadeiros.
+
+--------Como funcionam?
+Imagine um parque de diversões
+
+    AND: Para andar nobrinquedo voce precisa ter menos de 1.5m de altura E menos de 60kg
+
+    OR: Para andar no brinquedo voce precisa ter menos de 1.5 de altura OU menos do que 60kg
+
+    NOT: Voce NÃO pode andar no brinquedo se tiver mais do que 1.5m e altura
+
+void main(){
+
+
+final minhaAltura = 1.47;
+final meuPeso = 54;
+
+
+//OPERADOR AND (&&)
+//Para andar nobrinquedo voce precisa ter menos de 1.5m de altura E menos de 60kg
+//final podeAndar = minhaAltura < 1.5 && meuPeso <60;
+
+//print ("Eu posso andar no brinquis??$podeAndar");
+
+//OPERADOR OR (||)
+//Para andar no brinquedo voce precisa ter menos de 1.5 de altura OU menos do que 60kg
+//final possoAndar = minhaAltura < 1.5 || meuPeso < 60;
+
+//print ("Eu posso andar no brinquis??$possoAndar");
+
+//OPERADOR NOT (!)
+//Voce NÃO pode andar no brinquedo se tiver mais do que 1.5m e altura
+final temAndar = !(minhaAltura > 1.5);
+print ("Eu posso andar no brinquis??$temAndar");
+
+///////////IF E ELSE ///////////////
+--------O que são?
+    Estruturas condicionais, imagine umrobo que oma ações conforme cores que ele vê no chão. Se ele ver a cor verde ele segue em frente, se for vermelho ele vai para direito. Enquanto caminhar e ver verde, continue. Se ver a vermelha, vrar a direito. Serve para impor condições. Essa condição fica dentro do IF, se for incorreta o programa nn será executado e partirá para a outra condição: O Else.
+
+import 'dart:io';
+
+void main () {
+
+ stdout.write("Digite a sua altura: ");
+ final minhaAltura = double.parse(stdin.readLineSync()!);
+
+ stdout.write("Digite o seu peso: ");
+ final meuPeso = double.parse(stdin.readLineSync()!);
+
+ //final podeAndar = minhaAltura < 1.5 && meuPeso <60;
+
+ if(minhaAltura < 1.5 && meuPeso <60){
+   print("Você pode andar no brinquis");
+ } 
+ 
+  else {
+   print ("Infelizmente nn atende as condições");
+ }
+
+
+
+}
+
+//////////IF ELSE ALINHADO////////////////
+----------o que é?
+    serve para quando um if e um else nn suficientes, coloca-se primeiro o if, depois o else if () {} e por ultimo, apenas o else. ex:
+    final idade = int.parse(stdin.readLineSync()!);
+
+  if (idade <= 19) {
+    print("Você é jovem!");
+  } else if (idade >=20 && idade <=59) {
+    print("És adulto");
+  } else {
+    print("És idoso");
+  }
+
+///////stdou.write e stdin.readLineSync///////
+--------o que é?
+    Serve para mostrar uma mensagem antes de pedir uma mensagem pro usuário por meio do (stdin.readLineSync()!);. O stdin read line sync pede a informação que erá trabalhada para o usuário, e o stdout write mostra essa mensagem na saída. ex:
+
+    stdout.write("Insira sua idade: ")
+    final idade = int.parse(stdin.readLineSync()!);
+
+//////////SWITCH CASE////////////
+----------o que é?
+    É uma estrutura condicional que facilita a escolha de uma opçãopra executar uma ação com base em um valor em expecifico.Executa uma ação com base em um valor recebido. FAcilita escolhas de opçoes. Alternativa pro if e else pra deixar o  código mais limpo e  fácil de entender.
+
+    void main () {
+
+  print("SWITCH CASE --------------");
+
+  print("Bem vindo ao Roll Bank!");
+  print("Escolhas as opções abaixo:");
+  print("[1] - Sacar Dinheiro");
+  print("[2] - Depositar Dinheiro");
+  print("[3] - Transferir Dinheiro");
+  print("[4] - Imprimir extrato");
+
+  stdout.write("Digite a opção: ");
+  final opcaoes = stdin.readLineSync();
+
+  switch (opcaoes) {
+  case "1":
+    print("Você está sendo direcionado para o fluxo de sacar idnheiro");
+    break;
+
+  case "2":
+    print("Você está sendo direcionado para o fluxo de depositar idnheiro");
+    break;
+
+  case "3":
+    print("Você está sendo direcionado para o fluxo de transferir idnheiro");
+    break;
+
+  case "4":
+    print("Você está sendo direcionado para o fluxo de imprimir extrato");
+    break;
+
+  default:
+   print("Opção invalida, escolha uma das options acima!!!");
+   break;
+  }
+
+  /////o defeault no switchcase executa umaação caso nenhuma das opções acima forwm escolhidas.
+
+
+
+  print (opcaoes);
+
+
+}
+
+//////////////LAÇOS  DE REPETIÇÃO////////////
+-----------O que são?
+  Repetir um bloco de notas, ao inves de copiar e cola váris vezes podemos repetir um unico bloco de código inumeras de vezes. While, do While e for
+
+------------exemplo
+    //while: Enqquanto essa condiçã for verdadeira, repita o que estiiver dentro dos parenteses.
+
+
+  var contador = 1;
+  //nn posso usar o final pq vou alterar o vallor da variavel dps, portanto, NN se usa o final (q  é para variaveis constantes)
+
+  while (contador <=10) {
+    print(contador);
+    contador = contador +1;
+
+  }
+
+///////////////////OPERADORES DE ATRIBUIÇÃO////////////////////
+----------------O que são??
+  Ao ives e escreveer uma variávelassim: var numero1 = numero1 + 1; eu posso escrever ela da seguinte forma: var numero1 += 1;
+
+---------------exmplos
+   while (contador <=10) {
+    print(contador);
+    contador += 1;
+    ---------------
+    contador++
+    ---------------
+    contador--
+
+////////////////DO While
+----------------o que é??
+  Mesma coisa que o whilw, apenas ao contrário.
+  do {
+
+  } while ();
+
+////////////////////for
+-----------------o que é??
+  Assim como o while e o do while, é um laço de repetição. nele, declaramos a varavel dentro das condições
+
+ print("REPETIDOR DE FRASES-----------");
+
+  stdout.write("Insira uma frase diva: ");
+  final frase = stdin.readLineSync()!;
+
+  for (var num = 1; num <=5; num++) {
+    print(frase);
+  }
+
+///////////////////////////quando usar for, while, do while
+------------while:
+  Quando preciso repetir um código enquanto uma condição for verdadeira, mas não sei qunatas vezes vai repetir
+
+-------------do while
+  Uso quando também não sei quantas vezes o código irá repetir até que tal condição seja verdadeira, mas, tenho certeza que pelo menos uma vez ele irá se repetir
+
+-------------for 
+  Quando sei o inicio e o fim do código, qunado temos um fim e um inicio definidos, pra correr listas por exemplo
+
+
+///////////////ESCOPO DE váriaveis
+--------------O que é??
+  Um lugar onde a váriavel foi definida, só posso acessar ela no lugar onde declarei ela. se declarei ela no if, só posso acessar ela dentro do if - não fora. Por isso é necessário definir o escopo da váriavel.
+
+////////////////////LIST
+\-----------------O que é
+Uma List é uma coleção ordenada de elementos, onde cada item possui uma posição (índice) que começa em zero. É o tipo de estrutura mais comum para armazenar vários valores em uma única variável.
+
+Exemplo:
+List<String> frutas = \['maçã', 'banana', 'uva'];
+print(frutas\[1]); // imprime banana
+
+\-----------------Pra que serve
+Serve para guardar vários dados em sequência. Com ela, é possível acessar, modificar, adicionar ou remover elementos usando a posição de cada item.
+
+\-----------------Quando usar
+Quando for necessário armazenar diversos valores com uma ordem definida e quiser acessar esses dados pela posição. É útil em contagens, percursos e ordenações.
+
+////////////////////MAP
+-----------------O que é
+Um Map é uma coleção de pares chave-valor. Cada valor é associado a uma chave, que funciona como um identificador único.
+
+Exemplo:
+Map\<String, int> idades = {'Ana': 18, 'Bruno': 22};
+print(idades\['Bruno']); // imprime 22
+
+-----------------Pra que serve
+Serve para armazenar dados de forma associativa, como nomes e valores relacionados a eles. Permite acessar rapidamente um valor usando uma chave específica.
+
+-----------------Quando usar
+Quando você precisa associar um valor a um identificador que não é um número, como nomes, códigos ou palavras-chave.
+
+////////////////////SET
+-----------------O que é??
+Um Set é uma coleção de elementos únicos, ou seja, não permite valores repetidos. A ordem dos elementos não é garantida.
+
+Exemplo:
+Set<String> cores = {'azul', 'vermelho', 'verde', 'azul'};
+print(cores); // imprime {azul, vermelho, verde}
+
+-----------------Pra que serve
+Serve para armazenar valores sem repetições. Elimina automaticamente elementos duplicados.
+
+-----------------Quando usar
+Quando o mais importante é garantir que cada item apareça apenas uma vez, sem se preocupar com a ordem dos elementos.
+
+////////////////////contains
+\-----------------O que é
+É um método que verifica se um determinado elemento existe em uma lista.
+
+\-----------------Pra que serve
+Para confirmar se um valor está presente na coleção.
+
+\-----------------Quando usar
+Quando se quer saber se a lista contém um item específico antes de realizar outra ação.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera", "Melão"];
+print(frutas.contains("Melão")); // true
+
+////////////////////elementAt / \[]
+\-----------------O que é
+Ambos acessam um elemento pelo índice na lista.
+
+\-----------------Pra que serve
+Para obter um valor em uma posição específica.
+
+\-----------------Quando usar
+Quando você precisa ler ou usar diretamente um valor com base em sua posição na lista.
+
+Exemplo:
+List<int> numeros = \[3, 6, 8, 2];
+print(numeros.elementAt(2)); // 8
+print(numeros\[2]); // 8
+
+////////////////////indexOf
+\-----------------O que é
+Retorna o índice da primeira ocorrência de um elemento.
+
+\-----------------Pra que serve
+Para descobrir onde um valor está localizado na lista.
+
+\-----------------Quando usar
+Quando é necessário saber a posição de um elemento para manipulá-lo.
+
+Exemplo:
+List<String> frutas = \["Pera", "Melancia", "Melão"];
+print(frutas.indexOf("Melancia")); // 1
+
+////////////////////join
+\-----------------O que é
+Transforma os elementos da lista em uma única string, separados por um delimitador.
+
+\-----------------Pra que serve
+Para apresentar os elementos concatenados em uma só linha.
+
+\-----------------Quando usar
+Ao exibir dados em forma textual, como uma frase ou uma lista separada por vírgulas.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera", "Melão"];
+print(frutas.join(", ")); // Melancia, Pera, Melão
+
+////////////////////forEach
+\-----------------O que é
+Executa uma função para cada elemento da lista.
+
+\-----------------Pra que serve
+Para percorrer a lista aplicando uma ação individualmente a cada item.
+
+\-----------------Quando usar
+Quando você precisa analisar ou operar sobre todos os elementos de uma lista.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera", "Melão"];
+frutas.forEach((f) {
+print("Fruta: " + f);
+});
+
+////////////////////add / addAll
+\-----------------O que é
+Adiciona elementos à lista. add insere um item; addAll insere vários.
+
+\-----------------Pra que serve
+Para expandir o conteúdo da lista com novos valores.
+
+\-----------------Quando usar
+Quando há necessidade de incluir mais dados à coleção.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera"];
+frutas.add("Maçã");
+frutas.addAll(\["Uva", "Laranja"]);
+print(frutas); // \[Melancia, Pera, Maçã, Uva, Laranja]
+
+////////////////////insertAll
+\-----------------O que é
+Insere elementos em posições específicas da lista.
+
+\-----------------Pra que serve
+Para adicionar múltiplos itens em um ponto exato da lista.
+
+\-----------------Quando usar
+Quando a ordem de inserção importa.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera"];
+frutas.insertAll(1, \["Abacaxi", "Kiwi"]);
+print(frutas); // \[Melancia, Abacaxi, Kiwi, Pera]
+
+////////////////////clear
+\-----------------O que é
+Remove todos os elementos da lista.
+
+\-----------------Pra que serve
+Para esvaziar a lista completamente.
+
+\-----------------Quando usar
+Quando os dados anteriores não são mais necessários.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera"];
+frutas.clear();
+print(frutas); // \[]
+
+////////////////////remove / removeAt / removeRange / removeWhere
+\-----------------O que é
+Métodos para remover elementos da lista.
+remove exclui um valor específico.
+removeAt exclui pelo índice.
+removeRange exclui um intervalo de elementos.
+removeWhere exclui elementos que atendem a uma condição.
+
+\-----------------Pra que serve
+Para eliminar dados de formas variadas, conforme critério de conteúdo, posição ou condição.
+
+\-----------------Quando usar
+Quando você precisa limpar, atualizar ou filtrar elementos em uma lista.
+
+Exemplo:
+List<String> frutas = \["Melancia", "Pera", "Melão", "Uva"];
+frutas.remove("Pera");
+frutas.removeAt(1);
+frutas.removeRange(0, 1);
+frutas.removeWhere((f) => f.contains("a"));
+print(frutas);
+
+////////////////////where
+\-----------------O que é
+Filtra elementos que satisfazem uma condição e retorna uma nova coleção.
+
+\-----------------Pra que serve
+Para selecionar apenas os itens que atendem a um critério específico.
+
+\-----------------Quando usar
+Quando deseja-se criar uma sublista com base em alguma regra, como filtrar os carros de determinada marca.
+
+Exemplo:
+List\<Map\<String, dynamic>> carros = \[
+{"marca": "Fiat", "modelo": "Toro"},
+{"marca": "Hyundai", "modelo": "Creta"},
+];
+var hyundai = carros.where((c) => c\["marca"] == "Hyundai");
+print(hyundai);
+
+////////////////////firstWhere
+\-----------------O que é
+Retorna o primeiro elemento que satisfaz uma condição.
+
+\-----------------Pra que serve
+Para localizar o primeiro item correspondente a um critério.
+
+\-----------------Quando usar
+Quando é necessário encontrar rapidamente um elemento único com determinada característica.
+
+Exemplo:
+List\<Map\<String, dynamic>> carros = \[
+{"ano": 2012},
+{"ano": 1998},
+{"ano": 2020},
+];
+var antigo = carros.firstWhere((c) => c\["ano"] < 2015);
+print(antigo);
+
+////////////////////sort
+\-----------------O que é
+Ordena os elementos da lista. Pode receber uma função personalizada.
+
+\-----------------Pra que serve
+Para organizar os elementos de forma crescente ou decrescente.
+
+\-----------------Quando usar
+Quando a ordem dos dados influencia o resultado final ou a apresentação.
+
+Exemplo:
+List<int> numeros = \[5, 2, 9, 1];
+numeros.sort();
+print(numeros); // \[1, 2, 5, 9]
+numeros.sort((a, b) => b.compareTo(a));
+print(numeros); // \[9, 5, 2, 1]
+
+////////////////////map
+\-----------------O que é
+Transforma os elementos de uma lista, retornando uma nova coleção com os valores modificados.
+
+\-----------------Pra que serve
+Para extrair ou reestruturar os dados existentes em outro formato.
+
+\-----------------Quando usar
+Quando se quer gerar uma nova lista com base nos dados originais, como criar uma lista apenas com os nomes dos modelos de carros.
+
+Exemplo:
+List\<Map\<String, dynamic>> carros = \[
+{"modelo": "Civic"},
+{"modelo": "HB20"},
+];
+var modelos = carros.map((c) => c\["modelo"]);
+print(modelos);
+
+
