@@ -1,0 +1,40 @@
+------FUNDAMENTOS DAS APLICAÇÕES WEB-------
+--------------------------------------------
+------LINHA DO TEMPO-----------
++++1969 
+    Surgiu a ARPANET para o compartilhamento de informações descentralizados na guerra fria
+    É nessa mesma época que acontece o primeiro email
+++++Anos 70
+    A ARPANET é acessadas por não apenas por militares
+++++1983
+    Criação do TCP/IP
+++++1989
+    Tim Bernes cria o WWW - World Wide WEB
+++++1990
+    Primeiro Site
+++++1995
+    Netscape lança o JS
+++++1996
+    Lançamento do css1
+
+------------CLIENTE X SERVIDOR--------------
+++++O cliente solicita, o servidor oferece uma resposta para a requisição do liente.
+----------------------------------------------
+
+HTML(Hyper text markup language):
+     O esqueleto do Site, é baseado em TAGS
+JS: 
+    Traz interação para o site (Análago ao corpo humano, representa os musculos)-Linguagem de alto nivel
+CSS: 
+    Estiliza o site (Funciona a base de seletor, valor)
+
+-----WEB SITE X APLICAÇÕES WEB----------------
+++++Site:
+    Possuem menos interações, são mais estásticos: Nem todo site é uma aplicação web.
+++++Aplicações:
+    Mais dinamico, mais interações, mais solicitações e executa mais processos. Hoje em dia, trabalhamos mais com aplicações web.
+    EX:
+        Um site de compras(Carrinho, validação, dados) As aplicações usam a arquitetura de cliente servdor. O servidor permite que o cliente interaja com a aplicação sem precisar baixar nada. 
+        Meet, gmail,drive, aplicações de streaming...
+
+

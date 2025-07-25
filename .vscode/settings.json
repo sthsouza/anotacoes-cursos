@@ -1,0 +1,13 @@
+{
+    "folder-customization.folders": [
+        {
+            "path": "Cursos/CODAI - Back GD/"
+        },
+        {
+            "path": "Cursos/Dart - Lógica GD/",
+            "color": "foldercustomization.AnsiColor112",
+            "badge": "✅"
+        }
+    ],
+    "folder-color.pathColors": []
+}
